@@ -1,0 +1,27 @@
+DROP DATABASE IF EXISTS project_db;
+CREATE DATABASE project_db;
+
+USE project_db;
+
+CREATE TABLE departments (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    d_name VARCHAR(31) NOT NULL
+);
+
+CREATE TABLE roles (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    r_name VARCHAR(31) NOT NULL,
+    salary INT UNSIGNED NOT NULL,
+    department_id INT UNSIGNED,
+    FOREIGN KEY (department_id) REFERENCES departments(id)
+    ON DELETE CASCADE
+);
+
+CREATE TABLE employees (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    e_name VARCHAR(31) NOT NULL,
+    role_id INT UNSIGNED,
+    FOREIGN KEY (role_id) REFERENCES roles(id),
+    mgr_id INT UNSIGNED,
+    FOREIGN KEY (mgr_id) REFERENCES employees(id) ON DELETE SET NULL
+);
