@@ -6,6 +6,7 @@ This is a company builder I designed using Javascript, Inquirer, Mysql, and Node
 
 WHEN I start the application
 THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
+![Untitled_ Apr 30, 2023 10_46 PM (1)](https://user-images.githubusercontent.com/63683722/235404562-3addb251-5c37-4546-a6bb-814b109b9803.gif)
 WHEN I choose to view all departments
 THEN I am presented with a formatted table showing department names and department ids
 WHEN I choose to view all roles
