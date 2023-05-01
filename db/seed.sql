@@ -3,6 +3,7 @@ INSERT INTO departments (d_name)
             ("Espionage"),
             ("Customer Service"),
             ('HR');
+            
 
 INSERT INTO roles (r_name, salary, department_id)
     VALUES ("Logistics Coordination", 125000, 1),
